@@ -1,4 +1,5 @@
 import Navbar from './Navbar'
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -25,16 +26,20 @@ export default function Home() {
           
           {/* CTA Buttons */}
           <div className="flex gap-4 justify-center mb-16">
-            <button className="bg-indigo-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-indigo-700 transition shadow-lg">
-              Get Started Free
-            </button>
-            <button className="bg-white text-indigo-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-50 transition border-2 border-indigo-600">
-              See Demo
-            </button>
+            <Link href="/signup">
+              <button className="bg-indigo-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-indigo-700 transition shadow-lg">
+                Get Started Free
+              </button>
+            </Link>
+            <a href="#how-it-works">
+              <button className="bg-white text-indigo-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-50 transition border-2 border-indigo-600">
+                See How It Works
+              </button>
+            </a>
           </div>
 
           {/* Feature Cards */}
-          <div className="grid md:grid-cols-3 gap-8 mt-16">
+          <div className="grid md:grid-cols-3 gap-8 mt-16" id="features">
             {/* Feature 1 */}
             <div className="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition">
               <div className="text-4xl mb-4">🎯</div>
